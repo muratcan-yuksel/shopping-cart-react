@@ -1,6 +1,6 @@
 import React from 'react'
 import Layout from "./Layout"
-import {shopContainer} from "../styles/layout.module.css"
+import "../styles/layout.css"
 
 import WrongHegel from "../images/hegel-was-wrong.png"
 
@@ -14,7 +14,7 @@ const hegelWasWrong={title:"Hegel Was Wrong T-shirt", price:20, img:WrongHegel, 
 
     return (
       <Layout>
-        <div className={shopContainer}>
+        <div className="shopContainer">
         <div 
         className=" col-8 col-md-4 col-lg-4  text-center" 
         >
