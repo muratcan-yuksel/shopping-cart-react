@@ -8,7 +8,11 @@ import HobgoblinPage from "./pages/HobgoblinPage"
 import WrongHegelPage from "./pages/WrongHegelPage"
 import MadMarxPage from "./pages/MadMarxPage"
 import MadMarxBlackPage from "./pages/MadMarxBlackPage"
+import PhilosophyClubPage from "./pages/PhilosophyClubPage"
+import RadicalFreedomPage from "./pages/RadicalFreedomPage"
+import RevolutionPage from "./pages/RevolutionPage"
 import MarxLemonPage from "./pages/MarxLemonPage"
+import UpsideHegelPage from "./pages/UpsideHegelPage"
 
 
 
@@ -26,6 +30,10 @@ const Routes = () => {
         <Route exact path="/MadMarxPage" component={MadMarxPage} />
         <Route exact path="/MadMarxBlackPage" component={MadMarxBlackPage} />
         <Route exact path="/MarxLemonPage" component={MarxLemonPage} />
+        <Route exact path="/PhilosophyClubPage" component={PhilosophyClubPage} />
+        <Route exact path="/RadicalFreedomPage" component={RadicalFreedomPage} />
+        <Route exact path="/RevolutionPage" component={RevolutionPage} />
+        <Route exact path="/UpsideHegelPage" component={UpsideHegelPage} />
 
 
       </Switch>
