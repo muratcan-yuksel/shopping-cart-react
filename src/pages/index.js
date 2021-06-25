@@ -1,14 +1,14 @@
 import React from "react"
-// import Layout from "./Layout"
+import Layout from "./Layout"
 // import {indexContainer} from "../styles/layout.module.css"
-import styles from "../styles/layout.css"
+import "../styles/layout.css"
 
 import WelcomeImg from "../images/welcome.jpg"
 
 export default function Home() {
   return (
-  // <Layout>
-<div className={styles.indexContainer}>
+  <Layout>
+<div className="indexContainer">
 {/* <div>Hello world bruh</div> */}
 
 <img src={WelcomeImg} style={{maxWidth:"100%"}, {maxHeight:"55vh"}} />
@@ -21,6 +21,6 @@ export default function Home() {
 </div>
 
 
-  // </Layout>
+ </Layout>
   )
 }
