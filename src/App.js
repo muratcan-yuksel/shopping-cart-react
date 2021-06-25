@@ -1,11 +1,11 @@
 import React from "react"
 import WelcomePage from "./pages/index"
+// import "./styles/layout.css"
 
 function App() {
   return (
-    <div className="App">
+    <div>
      <WelcomePage />
-     <button className="btn btn-danger">dang</button>
     </div>
   );
 }
