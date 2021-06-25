@@ -1,0 +1,28 @@
+.body{
+    height: 100%;
+}
+.footer{
+    position:absolute;
+    bottom:0;
+    width:100vw;
+    height:60px;   /* Height of the footer */
+    background:#6cf;
+    display:flex;
+    justify-content: center;
+    align-items:flex-end;
+}
+.indexContainer{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    padding-top:2em;
+}
+.shopContainer{
+     display:flex;
+     flex-direction: column;
+  justify-content: center;
+  align-items:center;
+  margin-top:2em;
+
+}
