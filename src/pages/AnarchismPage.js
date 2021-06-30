@@ -14,7 +14,7 @@ const anarchism={title:"Anarchism T-shirt", price:20, img:Anarchism, sign:"$"}
 
 
 const addToCart=()=>{
-setItems(prevItems=>[...prevItems, "howol"])
+setItems(prevItems=>[...prevItems, anarchism])
 console.log(items)
 // setMovies(prevMovies=> [...prevMovies, {name:name, price:55}] )
 
