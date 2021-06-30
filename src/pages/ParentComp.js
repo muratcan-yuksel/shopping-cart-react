@@ -1,4 +1,5 @@
 import React from 'react'
+import CheckOut from './CheckOut'
 import AnarchismPage from './AnarchismPage'
 import HobgoblinPage from "./HobgoblinPage"
 import MadMarxBlackPage from "./MadMarxBlackPage"
@@ -13,7 +14,17 @@ import WrongHegelPage from "./WrongHegelPage"
 export default function ParentComp() {
     return (
         <div>
-            
+            <CheckOut />
+            <AnarchismPage />
+            <HobgoblinPage />
+            <MadMarxBlackPage />
+            <MadMarxPage />
+            <MarxLemonPage />
+            <PhilosophyClubPage />
+            <RadicalFreedomPage />
+            < RevolutionPage />
+            <UpsideHegelPage />
+            <WrongHegelPage />
         </div>
     )
 }
