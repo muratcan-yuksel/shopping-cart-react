@@ -1,13 +1,24 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import Layout from "./Layout"
 import "../styles/layout.css"
+import { ItemContext } from './ItemProvider'
 
 import Anarchism from "../images/anarchism.png"
 
 
 export default function AnarchismPage() {
+
 const anarchism={title:"Anarchism T-shirt", price:20, img:Anarchism, sign:"$"}
 
+    const [items, setItems]= useContext(ItemContext)
+
+
+const addToCart=()=>{
+setItems(prevItems=>[...prevItems, "howol"])
+console.log(items)
+// setMovies(prevMovies=> [...prevMovies, {name:name, price:55}] )
+
+}
 
 
 
@@ -29,7 +40,7 @@ const anarchism={title:"Anarchism T-shirt", price:20, img:Anarchism, sign:"$"}
           </div>
         </div>
         </div>
-        <button style={{marginTop:"1rem"}} className="btn btn-danger">Add to cart</button>
+        <button onClick={addToCart} style={{marginTop:"1rem"}} className="btn btn-danger">Add to cart</button>
         </div>
         </Layout>
     )
