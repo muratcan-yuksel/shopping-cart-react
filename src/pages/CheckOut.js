@@ -3,12 +3,18 @@ import { ItemContext } from './ItemProvider'
 
 export default function CheckOut() {
 
-    // const {items, setItems}= useContext(ItemContext)
-const value= useContext(ItemContext)
-console.log(value)
+    const [items, setItems]= useContext(ItemContext)
+    function foo(){
+        setItems([...items, "lololow"])
+    }
+// const value= useContext(ItemContext)
+console.log(items)
+let harry = items[0].name
     return (
         <div>
-            <p>{value} </p>
+            {/* <p>{items}[0].name </p> */}
+            <p>{harry}</p>
+            <button onClick={foo}>btn</button>
             
         </div>
     )
