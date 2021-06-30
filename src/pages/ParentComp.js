@@ -10,10 +10,13 @@ import RadicalFreedomPage from "./RadicalFreedomPage"
 import RevolutionPage from "./RevolutionPage"
 import UpsideHegelPage from "./UpsideHegelPage"
 import WrongHegelPage from "./WrongHegelPage"
+import { ItemProvider } from './ItemProvider'
+
 
 export default function ParentComp() {
     return (
         <div>
+            <ItemProvider>
             <CheckOut />
             <AnarchismPage />
             <HobgoblinPage />
@@ -25,6 +28,7 @@ export default function ParentComp() {
             < RevolutionPage />
             <UpsideHegelPage />
             <WrongHegelPage />
+            </ItemProvider>
         </div>
     )
 }

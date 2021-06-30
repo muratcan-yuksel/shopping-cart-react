@@ -13,6 +13,8 @@ import RadicalFreedomPage from "./pages/RadicalFreedomPage"
 import RevolutionPage from "./pages/RevolutionPage"
 import MarxLemonPage from "./pages/MarxLemonPage"
 import UpsideHegelPage from "./pages/UpsideHegelPage"
+import CheckOut from "./pages/CheckOut";
+import ParentComp from "./pages/ParentComp";
 
 
 
@@ -34,6 +36,8 @@ const Routes = () => {
         <Route exact path="/RadicalFreedomPage" component={RadicalFreedomPage} />
         <Route exact path="/RevolutionPage" component={RevolutionPage} />
         <Route exact path="/UpsideHegelPage" component={UpsideHegelPage} />
+        <Route exact path="/CheckOut" component= {CheckOut}/>
+        <Route exact path="/ParentComp" component= {ParentComp}/>
 
 
       </Switch>
