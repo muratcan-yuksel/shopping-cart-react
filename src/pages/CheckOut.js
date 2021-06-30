@@ -8,7 +8,7 @@ const value= useContext(ItemContext)
 console.log(value)
     return (
         <div>
-            <p>value </p>
+            <p>{value} </p>
             
         </div>
     )

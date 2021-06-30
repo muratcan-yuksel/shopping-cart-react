@@ -14,8 +14,7 @@ import RevolutionPage from "./pages/RevolutionPage"
 import MarxLemonPage from "./pages/MarxLemonPage"
 import UpsideHegelPage from "./pages/UpsideHegelPage"
 import CheckOut from "./pages/CheckOut";
-import ParentComp from "./pages/ParentComp";
-
+import { ItemProvider } from "./pages/ItemProvider";
 
 
 
@@ -25,6 +24,7 @@ const Routes = () => {
       <Switch>
         <Route exact path="/" component={App} />
         <Route exact path="/welcome" component={WelcomePage} />
+        <ItemProvider>
         <Route exact path="/Shop" component={Shop} />
         <Route exact path="/AnarchismPage" component={AnarchismPage} />
         <Route exact path="/HobgoblinPage" component={HobgoblinPage} />
@@ -37,7 +37,7 @@ const Routes = () => {
         <Route exact path="/RevolutionPage" component={RevolutionPage} />
         <Route exact path="/UpsideHegelPage" component={UpsideHegelPage} />
         <Route exact path="/CheckOut" component= {CheckOut}/>
-        <Route exact path="/ParentComp" component= {ParentComp}/>
+        </ItemProvider>
 
 
       </Switch>

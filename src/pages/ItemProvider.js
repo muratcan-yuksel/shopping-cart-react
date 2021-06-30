@@ -14,12 +14,12 @@ import WrongHegelPage from "./WrongHegelPage"
 
 export const ItemContext = createContext();
 
-export const ItemProvider= () => {
+export const ItemProvider= (props) => {
     // const [items, setItems]= useState("low")
     return (
         <div>
             <ItemContext.Provider value= {"looow"}>
-            <CheckOut />
+            {/* <CheckOut />
             <AnarchismPage />
             <HobgoblinPage />
             <MadMarxBlackPage />
@@ -29,7 +29,8 @@ export const ItemProvider= () => {
             <RadicalFreedomPage />
             < RevolutionPage />
             <UpsideHegelPage />
-            <WrongHegelPage />
+            <WrongHegelPage /> */}
+            {props.children}
             </ItemContext.Provider>
             
         </div>
