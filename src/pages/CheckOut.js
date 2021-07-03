@@ -51,7 +51,7 @@ const mapped = items.map((item=>{
       <Layout>
         <div>
         <div className="btns">
-         <p style={{fontWeight:"900"}}> Total payment: ${total} </p>
+         <p style={{fontWeight:"900"}, {color:"white"}}> Total payment: ${total} </p>
         </div>
         <div className="btns">
         <button onClick={finalize} className="btn btn-danger">Finalize order</button>
