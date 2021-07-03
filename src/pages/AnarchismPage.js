@@ -22,8 +22,8 @@ const [state,setState] = useState(obj)
 
 
 const addItem = () => {
-setState(prevState=>(prevState.amount + 1))
-console.log(typeof(state.amount))
+setState({amount: state.amount + 1})
+console.log(state.amount)
 
 }
 
