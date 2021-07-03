@@ -9,8 +9,9 @@ export default function CheckOut() {
     const [items, setItems]= useContext(ItemContext)
   
 console.log(items)
-//I'll use this to update the increment/decrement functions
-const [state,setState]= useState(items)
+
+//reducer function to get the total payment
+const total= Object.values(items).reduce((t, {price})=> t+ price, 0)
 
 const mapped = items.map((item=>{
   console.log(item.title)
@@ -44,10 +45,14 @@ const mapped = items.map((item=>{
     return (
       <Layout>
         <div>
-        { mapped  }
+        <div className="btns">
+         <p style={{fontWeight:"900"}}> Total payment: ${total} </p>
+        </div>
         <div className="btns">
         <button className="btn btn-danger">Finalize order</button>
         </div>
+        { mapped  }
+       
         </div>
         </Layout>
     )

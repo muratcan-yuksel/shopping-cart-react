@@ -8,7 +8,7 @@ import PhiloClub from "../images/philo-club.png"
 
 export default function PhilosophyClubPage() {
 
-const obj={title:"Wittgenstein and Russell-Philosophy Club T-shirt", price:20, img:PhiloClub, sign:"$", ammount:0}
+const obj={title:"Wittgenstein and Russell-Philosophy Club T-shirt", price:20, img:PhiloClub, sign:"$", amount:0}
 
 
 
