@@ -42,7 +42,7 @@ console.log(items)
         <div 
         className=" col-8 col-md-4 col-lg-4  text-center" 
         >
-      <div className="card h-100 mx-auto w-100 ">          
+      <div className="card h-100 mx-auto w-100 " >          
           <img      
          src={obj.img}
         className="card-img-top h-100 "
