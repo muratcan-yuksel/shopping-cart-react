@@ -27,15 +27,13 @@ const mapped = items.map((item=>{
           ></img>      
           <div className="card-body">
             <p className="card-text">{item.title}</p>
-            <p className="card-text">{item.sign} {state.price}</p>
+            <p className="card-text">{item.sign} {item.price}</p>
             <div className= "amountBtns">
-            <button  style={{height:"3em"}} type="button" className="btn btn-dark">-</button>
-            <p style={{fontSize:"2rem"}, {margin:"1rem"}} className="card-text">{state.amount}</p>
-            <button style={{height:"3em"}} type="button" className="btn btn-dark">+</button>            </div>
+            <p style={{fontSize:"2rem"}, {margin:"1rem"}} className="card-text">Amount:  {item.amount}</p>
+             </div>
           </div>
         </div>
         </div>
-        <button  style={{marginTop:"1rem"}} className="btn btn-danger">Add to cart</button>
         </div>
     </div>
   )
@@ -46,6 +44,8 @@ const mapped = items.map((item=>{
       <Layout>
         <div>
         { mapped  }
+        <button className="btn btn-danger">Finalize order</button>
+
         </div>
         </Layout>
     )
