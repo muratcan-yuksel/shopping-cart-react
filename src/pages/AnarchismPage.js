@@ -1,4 +1,4 @@
-import React, {useContext} from 'react'
+import React, {useContext, useState} from 'react'
 import Layout from "./Layout"
 import "../styles/layout.css"
 import { ItemContext } from './ItemProvider'
@@ -18,6 +18,14 @@ setItems(prevItems=>[...prevItems, obj])
 console.log(items)
 }
 
+const [state,setState] = useState(obj)
+
+
+const addItem = () => {
+setState(prevState=>(prevState.amount + 1))
+console.log(typeof(state.amount))
+
+}
 
 
     return (
@@ -38,7 +46,7 @@ console.log(items)
             <div class= "amountBtns">
             <button style={{height:"3em"}} type="button" class="btn btn-dark">-</button>
             <p style={{fontSize:"2rem"}, {margin:"1rem"}} className="card-text">{obj.amount}</p>
-            <button style={{height:"3em"}} type="button" class="btn btn-dark">+</button>            </div>
+            <button onClick={addItem} style={{height:"3em"}} type="button" class="btn btn-dark">+</button>            </div>
 
           </div>
         </div>
