@@ -8,7 +8,7 @@ import WrongHegel from "../images/hegel-was-wrong.png"
 
 export default function WrongHegelPage() {
 
-const obj={title:"Hegel Was Wrong T-shirt", price:20, img:WrongHegel, sign:"$", amount:0}
+const obj={title:"Hegel Was Wrong T-shirt", price:20, img:WrongHegel, sign:"$", amount:1}
 
 
 

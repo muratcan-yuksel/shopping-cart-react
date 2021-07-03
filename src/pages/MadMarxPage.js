@@ -8,7 +8,7 @@ import MadMarx from "../images/mad-marx.png"
 
 export default function MadMarxPage() {
 
-const obj={title:"Mad Marx T-shirt", price:20, img:MadMarx, sign:"$", amount:0}
+const obj={title:"Mad Marx T-shirt", price:20, img:MadMarx, sign:"$", amount:1}
 
 
 

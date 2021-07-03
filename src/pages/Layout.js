@@ -12,9 +12,7 @@ export default function Layout({children}) {
                 I need to do this "children" thing */}
                 {children}
             </div>
-            {/* <footer className={footer}>
-                <p>Copyright 2021 Murat Can Yüksel</p>
-            </footer> */}
+           
             
         </div>
     )

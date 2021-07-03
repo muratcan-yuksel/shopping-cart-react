@@ -8,7 +8,7 @@ import Hobgoblin from "../images/hobgoblin.png"
 
 export default function HobgoblinPage() {
 
-const obj={title:"Hobgoblin T-shirt", price:20, img:Hobgoblin, sign:"$", amount:0}
+const obj={title:"Hobgoblin T-shirt", price:20, img:Hobgoblin, sign:"$", amount:1}
 
 
 

@@ -8,7 +8,7 @@ import Freedom from "../images/radical-freedom.png"
 
 export default function RadicalFreedomPage() {
 
-const obj={title:"Radical Freedom T-shirt", price:20, img:Freedom, sign:"$", amount:0}
+const obj={title:"Radical Freedom T-shirt", price:20, img:Freedom, sign:"$", amount:1}
 
 
 

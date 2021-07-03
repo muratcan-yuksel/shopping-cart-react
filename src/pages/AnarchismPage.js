@@ -8,7 +8,7 @@ import Anarchism from "../images/anarchism.png"
 
 export default function AnarchismPage() {
 
-const obj={title:"Anarchism T-shirt", price:20, img:Anarchism, sign:"$", amount:0}
+const obj={title:"Anarchism T-shirt", price:20, img:Anarchism, sign:"$", amount:1}
 
 //use the useState hook
 const [state,setState] = useState(obj)

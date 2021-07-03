@@ -8,7 +8,7 @@ import MarxLemon from "../images/marx-lemon.png"
 
 export default function MarxLemonPage() {
 
-const obj={title:"Life gives you lemons T-shirt ", price:20, img:MarxLemon, sign:"$", amount:0}
+const obj={title:"Life gives you lemons T-shirt ", price:20, img:MarxLemon, sign:"$", amount:1}
 
 
 

@@ -13,6 +13,11 @@ console.log(items)
 //reducer function to get the total payment
 const total= Object.values(items).reduce((t, {price})=> t+ price, 0)
 
+//finalize order function
+const finalize = () =>{
+  alert("I'm sorry, I can't let you do that.")
+}
+
 const mapped = items.map((item=>{
   console.log(item.title)
   return (
@@ -49,7 +54,7 @@ const mapped = items.map((item=>{
          <p style={{fontWeight:"900"}}> Total payment: ${total} </p>
         </div>
         <div className="btns">
-        <button className="btn btn-danger">Finalize order</button>
+        <button onClick={finalize} className="btn btn-danger">Finalize order</button>
         </div>
         { mapped  }
        

@@ -8,7 +8,7 @@ import UpsideHegel from "../images/upside-hegel.png"
 
 export default function UpsideHegelPage() {
 
-const obj={title:"Hegel turned upside down T-shirt", price:20, img:UpsideHegel, sign:"$", amount:0}
+const obj={title:"Hegel turned upside down T-shirt", price:20, img:UpsideHegel, sign:"$", amount:1}
 
 
 

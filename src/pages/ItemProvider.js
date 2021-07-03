@@ -3,7 +3,7 @@ import uniqid from "uniqid";
 
 
 
-export const ItemContext = createContext();
+export const ItemContext = createContext("undefined");
 
 export const ItemProvider= (props) => {
     const [items, setItems]= useState([])

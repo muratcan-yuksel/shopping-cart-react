@@ -8,7 +8,7 @@ import Revolution from "../images/revolution.png"
 
 export default function RevolutionPage() {
 
-const obj={title:"Marx-Revolution T-shirt", price:20, img:Revolution, sign:"$", amount:0}
+const obj={title:"Marx-Revolution T-shirt", price:20, img:Revolution, sign:"$", amount:1}
 
 
 
