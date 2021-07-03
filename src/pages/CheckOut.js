@@ -1,6 +1,7 @@
 import React, {useState, useContext, useEffect} from 'react'
 import { ItemContext } from './ItemProvider'
 import Layout from "./Layout"
+import uniqid from "uniqid";
 
 export default function CheckOut() {
 
@@ -13,7 +14,7 @@ const [state,setState]= useState(items)
 const mapped = items.map((item=>{
   console.log(item.title)
   return (
-    <div>
+    <div key={item.id}>
        <div className="shopContainer">
         <div 
         className=" col-8 col-md-4 col-lg-4  text-center" 
