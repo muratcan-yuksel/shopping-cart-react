@@ -1,15 +1,42 @@
-import React from 'react'
+import React, {useContext, useState} from 'react'
 import Layout from "./Layout"
 import "../styles/layout.css"
+import { ItemContext } from './ItemProvider'
 
 import MarxBlack from "../images/mad-marx-black.png"
 
 
 export default function MadMarxBlackPage() {
 
-const obj={title:"Mad Marx T-shirt Black", price:20, img:MarxBlack, sign:"$"}
+const obj={title:"Mad Marx T-shirt Black", price:20, img:MarxBlack, sign:"$", amount:0}
 
 
+
+
+  //use the useState hook
+const [state,setState] = useState(obj)
+
+// see price: state.price + 20? this is how you update values in objects
+const incrementItem = () => {
+setState({title: state.title, price: state.price + 20, img: state.img, sign:"$",  amount: state.amount + 1})
+console.log(state)
+
+}
+
+const decrementItem=()=>{
+if (state.amount >0){
+  setState({title: state.title, price: state.price - 20, img: state.img, sign:"$",  amount: state.amount - 1})
+  console.log(state)
+}}
+
+//use useContext hook
+const [items, setItems]= useContext(ItemContext)
+
+//in JSX, you'll see that in order to render the newly updated values, I used state.amount instead of obj.amount etc.
+const addToCart=()=>{
+setItems(prevItems=>[...prevItems, state])
+console.log(items)
+}
 
 
     return (
@@ -26,11 +53,15 @@ const obj={title:"Mad Marx T-shirt Black", price:20, img:MarxBlack, sign:"$"}
           ></img>      
           <div className="card-body">
             <p className="card-text">{obj.title}</p>
-            <p className="card-text">{obj.sign} {obj.price}</p>
+            <p className="card-text">{obj.sign} {state.price}</p>
+            <div className= "amountBtns">
+            <button onClick={decrementItem} style={{height:"3em"}} type="button" className="btn btn-dark">-</button>
+            <p style={{fontSize:"2rem"}, {margin:"1rem"}} className="card-text">{state.amount}</p>
+            <button onClick={incrementItem} style={{height:"3em"}} type="button" className="btn btn-dark">+</button>            </div>
           </div>
         </div>
         </div>
-        <button style={{marginTop:"1rem"}} className="btn btn-danger">Add to cart</button>
+        <button onClick={addToCart} style={{marginTop:"1rem"}} className="btn btn-danger">Add to cart</button>
         </div>
         </Layout>
     )
