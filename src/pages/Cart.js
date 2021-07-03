@@ -4,6 +4,8 @@ import { ItemContext } from './ItemProvider'
 export default function Cart() {
 
       const [items, setItems]= useContext(ItemContext)
+      
+     
   
   const total= Object.values(items).reduce((t, {amount})=> t+ amount, 0)
     return (
@@ -17,6 +19,7 @@ export default function Cart() {
         <path d="M6 5l14 1l-1 7h-13" />
       </svg>
         <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+      
           {total}
           <span className="visually-hidden">unread messages</span>
         </span>

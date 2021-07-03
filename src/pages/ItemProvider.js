@@ -2,8 +2,8 @@ import React, {useState, createContext} from 'react'
 import uniqid from "uniqid";
 
 
-
-export const ItemContext = createContext("undefined");
+//if I don't give this [0] in the context, I get an error bcs of Cart.js
+export const ItemContext = createContext([0]);
 
 export const ItemProvider= (props) => {
     const [items, setItems]= useState([])
