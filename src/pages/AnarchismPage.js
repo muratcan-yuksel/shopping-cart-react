@@ -51,10 +51,10 @@ console.log(items)
           <div className="card-body">
             <p className="card-text">{obj.title}</p>
             <p className="card-text">{obj.sign} {state.price}</p>
-            <div class= "amountBtns">
-            <button onClick={decrementItem} style={{height:"3em"}} type="button" class="btn btn-dark">-</button>
+            <div className= "amountBtns">
+            <button onClick={decrementItem} style={{height:"3em"}} type="button" className="btn btn-dark">-</button>
             <p style={{fontSize:"2rem"}, {margin:"1rem"}} className="card-text">{state.amount}</p>
-            <button onClick={incrementItem} style={{height:"3em"}} type="button" class="btn btn-dark">+</button>            </div>
+            <button onClick={incrementItem} style={{height:"3em"}} type="button" className="btn btn-dark">+</button>            </div>
           </div>
         </div>
         </div>
