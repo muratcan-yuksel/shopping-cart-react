@@ -8,25 +8,22 @@ export default function CheckOut() {
   
 console.log(items)
 
-useEffect(() => {
-  const mappedItems= items.map(item=>{
-    <div>
-    console.log(item.title, item.price)
-    <p>{item.title}</p>
-    </div>
-  })}, [items]);
+const [state,setState]= useState(items)
 
-const mappedItems= items.map(item=>{
-  <div>
-  console.log(item.title, item.price)
-  <p>{item.title}</p>
-  </div>
-})
+const mapped = items.map((item=>{
+  console.log(item.title)
+  return (
+    <p>{item.title}</p>
+  )
+}))
+
 
     return (
       <Layout>
         <div>
-        {mappedItems}          
+        {
+          mapped
+        }
         </div>
         </Layout>
     )
