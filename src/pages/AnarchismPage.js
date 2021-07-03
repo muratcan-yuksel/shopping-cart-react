@@ -10,10 +10,10 @@ export default function AnarchismPage() {
 
 const obj={title:"Anarchism T-shirt", price:20, img:Anarchism, sign:"$", amount:0}
 
-
+//use the useState hook
 const [state,setState] = useState(obj)
 
-
+// see price: state.price + 20? this is how you update values in objects
 const incrementItem = () => {
 setState({title:"Anarchism T-shirt", price: state.price + 20, img:Anarchism, sign:"$",  amount: state.amount + 1})
 console.log(state)
@@ -24,16 +24,12 @@ const decrementItem=()=>{
 if (state.amount >0){
   setState({title:"Anarchism T-shirt", price: state.price - 20, img:Anarchism, sign:"$",  amount: state.amount - 1})
   console.log(state)
-}
+}}
 
-}
-
-
-
-
+//use useContext hook
 const [items, setItems]= useContext(ItemContext)
 
-
+//in JSX, you'll see that in order to render the newly updated values, I used state.amount instead of obj.amount etc.
 const addToCart=()=>{
 setItems(prevItems=>[...prevItems, state])
 console.log(items)
@@ -59,7 +55,6 @@ console.log(items)
             <button onClick={decrementItem} style={{height:"3em"}} type="button" class="btn btn-dark">-</button>
             <p style={{fontSize:"2rem"}, {margin:"1rem"}} className="card-text">{state.amount}</p>
             <button onClick={incrementItem} style={{height:"3em"}} type="button" class="btn btn-dark">+</button>            </div>
-
           </div>
         </div>
         </div>
