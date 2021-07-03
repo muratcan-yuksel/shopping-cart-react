@@ -8,7 +8,7 @@ import Anarchism from "../images/anarchism.png"
 
 export default function AnarchismPage() {
 
-const obj={title:"Anarchism T-shirt", price:20, img:Anarchism, sign:"$"}
+const obj={title:"Anarchism T-shirt", price:20, img:Anarchism, sign:"$", amount:0}
 
     const [items, setItems]= useContext(ItemContext)
 
@@ -35,6 +35,11 @@ console.log(items)
           <div className="card-body">
             <p className="card-text">{obj.title}</p>
             <p className="card-text">{obj.sign} {obj.price}</p>
+            <div class= "amountBtns">
+            <button style={{height:"3em"}} type="button" class="btn btn-dark">-</button>
+            <p style={{fontSize:"2rem"}, {margin:"1rem"}} className="card-text">{obj.amount}</p>
+            <button style={{height:"3em"}} type="button" class="btn btn-dark">+</button>            </div>
+
           </div>
         </div>
         </div>
