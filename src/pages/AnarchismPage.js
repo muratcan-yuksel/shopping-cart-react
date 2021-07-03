@@ -15,14 +15,14 @@ const [state,setState] = useState(obj)
 
 // see price: state.price + 20? this is how you update values in objects
 const incrementItem = () => {
-setState({title:"Anarchism T-shirt", price: state.price + 20, img:Anarchism, sign:"$",  amount: state.amount + 1})
+setState({title: state.title, price: state.price + 20, img: state.img, sign:"$",  amount: state.amount + 1})
 console.log(state)
 
 }
 
 const decrementItem=()=>{
 if (state.amount >0){
-  setState({title:"Anarchism T-shirt", price: state.price - 20, img:Anarchism, sign:"$",  amount: state.amount - 1})
+  setState({title: state.title, price: state.price - 20, img: state.img, sign:"$",  amount: state.amount - 1})
   console.log(state)
 }}
 
