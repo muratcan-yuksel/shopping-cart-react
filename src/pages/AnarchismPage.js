@@ -10,21 +10,26 @@ export default function AnarchismPage() {
 
 const obj={title:"Anarchism T-shirt", price:20, img:Anarchism, sign:"$", amount:0}
 
-    const [items, setItems]= useContext(ItemContext)
-
-
-const addToCart=()=>{
-setItems(prevItems=>[...prevItems, obj])
-console.log(items)
-}
 
 const [state,setState] = useState(obj)
 
 
-const addItem = () => {
-setState({amount: state.amount + 1})
-console.log(state.amount)
+const incrementItem = () => {
+setState({title:"Anarchism T-shirt", price:20, img:Anarchism, sign:"$",  amount: state.amount + 1})
+console.log(state)
 
+}
+
+
+
+
+
+const [items, setItems]= useContext(ItemContext)
+
+
+const addToCart=()=>{
+setItems(prevItems=>[...prevItems, state])
+console.log(items)
 }
 
 
@@ -45,8 +50,8 @@ console.log(state.amount)
             <p className="card-text">{obj.sign} {obj.price}</p>
             <div class= "amountBtns">
             <button style={{height:"3em"}} type="button" class="btn btn-dark">-</button>
-            <p style={{fontSize:"2rem"}, {margin:"1rem"}} className="card-text">{obj.amount}</p>
-            <button onClick={addItem} style={{height:"3em"}} type="button" class="btn btn-dark">+</button>            </div>
+            <p style={{fontSize:"2rem"}, {margin:"1rem"}} className="card-text">{state.amount}</p>
+            <button onClick={incrementItem} style={{height:"3em"}} type="button" class="btn btn-dark">+</button>            </div>
 
           </div>
         </div>
