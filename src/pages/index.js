@@ -11,7 +11,7 @@ export default function Home() {
   <Layout>
 <div className="indexContainer">
 
-<img src={WelcomeImg} style={{maxWidth:"100%"}, {maxHeight:"45vh"}} />
+<img src={WelcomeImg} style={{maxWidth:"100%"}, {maxHeight:"55vh"}} />
 
 <button type="button" style={{marginTop:"3em"}} className="btn btn-danger btn-lg">
 
