@@ -15,11 +15,18 @@ const [state,setState] = useState(obj)
 
 
 const incrementItem = () => {
-setState({title:"Anarchism T-shirt", price:20, img:Anarchism, sign:"$",  amount: state.amount + 1})
+setState({title:"Anarchism T-shirt", price: state.price + 20, img:Anarchism, sign:"$",  amount: state.amount + 1})
 console.log(state)
 
 }
 
+const decrementItem=()=>{
+if (state.amount >0){
+  setState({title:"Anarchism T-shirt", price: state.price - 20, img:Anarchism, sign:"$",  amount: state.amount - 1})
+  console.log(state)
+}
+
+}
 
 
 
@@ -47,9 +54,9 @@ console.log(items)
           ></img>      
           <div className="card-body">
             <p className="card-text">{obj.title}</p>
-            <p className="card-text">{obj.sign} {obj.price}</p>
+            <p className="card-text">{obj.sign} {state.price}</p>
             <div class= "amountBtns">
-            <button style={{height:"3em"}} type="button" class="btn btn-dark">-</button>
+            <button onClick={decrementItem} style={{height:"3em"}} type="button" class="btn btn-dark">-</button>
             <p style={{fontSize:"2rem"}, {margin:"1rem"}} className="card-text">{state.amount}</p>
             <button onClick={incrementItem} style={{height:"3em"}} type="button" class="btn btn-dark">+</button>            </div>
 
